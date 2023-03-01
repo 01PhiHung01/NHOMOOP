@@ -1,0 +1,77 @@
+//package projeccki;
+import java.util.Scanner;
+public class Khachhang {
+    private String tenKH;
+    private String diachi;
+    private int sdt;
+    private String donhangdat;
+    private int sokhachhangtra;
+
+public Khachhang() {}
+
+public Khachhang(String tenKH,String diachi,int sdt,String donhangdat,int sokhachhangtra) {
+    this.tenKH=tenKH;
+    this.diachi=diachi;
+    this.sdt=sdt;
+    this.donhangdat=donhangdat;
+    this.sokhachhangtra=sokhachhangtra;
+}
+public String getTenKH() {
+    return this.tenKH;
+}
+public void setTenKH(String tenKH) {
+    this.tenKH=tenKH;
+}
+public String getDiachi() {
+    return this.diachi;
+}
+public void setDiachi(String diachi) {
+    this.diachi=diachi;
+}
+public int getSdt() {
+    return this.sdt;
+}
+public void setSdt(int sdt) {
+    this.sdt=sdt;
+}
+public String getDonhangdat() {
+    return this.donhangdat;
+}
+public void setDonhangdat(String donhangdat) {
+    this.donhangdat=donhangdat;
+}
+public int getSokhachhangtra() {
+    return this.sokhachhangtra;
+}
+public void setSokhachhangtra(int sokhachhangtra) {
+    this.sokhachhangtra=sokhachhangtra;
+}    
+public void inKhachhang() {
+    System.out.printf("%-20s %-20s %-10d %-10d %-10d \n",tenKH,diachi,sdt,donhangdat,sokhachhangtra);
+}
+}
+public class Main {
+    public static void main(String[] args) {
+        Khachhang kh = new Khachhang();
+        Scanner n = new Scanner(System.in);
+        System.out.println("Moi nhap ten khach hang: ");
+        kh.setTenKH(n.nextLine());
+        System.out.println("Moi nhap dia chi: ");
+        kh.setDiachi(n.nextLine());
+        System.out.println("Moi nhap so dien thoai: ");
+        kh.setSdt(n.nextInt());
+        System.out.println("Nhap don dat hang: ");
+        kh.setDonhangdat(n.nextLine());
+        n.nextLine();
+        System.out.println("Nhap so khach hang tra don hang: ");
+        kh.setSokhachhangtra(n.nextInt());    
+        System.out.printf("%-20s %-20s %-10d %-10d %-10d \n","Ten khach hang","Dia chi","So dien thoai","Don dat hang","So khach hang tra hang");
+        kh.inKhachhang();
+    
+}
+}   
+
+
+
+    
+
